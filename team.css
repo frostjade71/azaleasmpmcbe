@@ -1,0 +1,126 @@
+.team-section {
+    padding: 120px 0 80px;
+    background: #1a1a1a;
+    min-height: 100vh;
+}
+
+.team-title {
+    text-align: center;
+    color: #ffffff;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url('./images/season4.png') center/cover;
+    padding: 4rem 2rem;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    border-radius: 15px;
+    margin-top: 2rem;
+}
+
+.team-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--accent-color);
+    box-shadow: 0 0 20px var(--accent-color);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 0 20px;
+    max-width: 1000px;  /* increased from previous width */
+    margin: 0 auto;
+}
+
+.team-card {
+    background: linear-gradient(145deg, #222, #1a1a1a);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    max-width: 250px;
+}
+
+.team-card.wide {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 2rem;
+    max-width: 900px;  /* set specific width for wide cards */
+    margin: 0 auto;
+    text-align: left;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+}
+
+.member-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1rem;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+    box-shadow: 0 0 20px rgba(46, 204, 113, 0.3);
+}
+
+.member-role {
+    display: inline-block;
+    background: rgba(46, 204, 113, 0.1);
+    color: var(--accent-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.member-name {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.member-bio {
+    color: #a0a0a0;
+    line-height: 1.6;
+}
+
+.section-title {
+    color: #ffffff;
+    font-size: 2rem;
+    margin: 3rem 0 2rem;
+    text-align: center;
+}
+
+.section-divider {
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--accent-color), transparent);
+    margin: 4rem auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+@media (max-width: 768px) {
+    .team-title {
+        font-size: 2rem;
+        padding: 3rem 1rem;
+    }
+    
+    .team-grid {
+        padding: 0 10px;
+    }
+}
