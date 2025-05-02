@@ -306,3 +306,96 @@
         font-size: 1.5rem;
     }
 }
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    background: linear-gradient(rgba(26, 26, 26, 0.9), rgba(34, 34, 34, 0.95)),
+                url('./History/S1/frostworld.jpg') center/cover;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin: 2rem auto;
+    max-width: 900px;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+}
+
+.stat-item {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.stat-icon {
+    font-size: 2rem;
+    color: var(--accent-color);
+    background: rgba(46, 204, 113, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid rgba(46, 204, 113, 0.2);
+}
+
+.stat-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1;
+    transition: color 0.3s ease;
+}
+
+.number-updated {
+    color: var(--accent-color);
+    animation: pulse 1s ease;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.stat-label {
+    color: #a0a0a0;
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+}
+
+.member-counts {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.online-count {
+    color: #a0a0a0;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+
+    .stat-item {
+        justify-content: center;
+    }
+}

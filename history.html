@@ -44,16 +44,37 @@
     <section class="timeline-section" id="history">
         <div class="container">
             <div class="timeline-header">
-                <div class="season-stats">
+                <div class="stats-container">
                     <div class="stat-item">
-                        <i class="fas fa-users"></i>
-                        <span>800+ Players</span>
+                        <div class="stat-icon">
+                            <i class="fab fa-discord"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="member-counts">
+                                <span class="stat-number">850+</span>
+                                <span class="online-count">(<span id="online-count">0</span> online)</span>
+                            </div>
+                            <span class="stat-label">Discord Members</span>
+                        </div>
                     </div>
                     <div class="stat-item">
-                        <i class="fas fa-calendar"></i>
-                        <span>5 Seasons</span>
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">700+</span>
+                            <span class="stat-label">Realm Invited Users</span>
+                        </div>
                     </div>
-                    
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">Seasons</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -172,5 +193,6 @@
             interval: 200
         });
     </script>
+    <script src="discord-stats.js"></script>
 </body>
 </html>
